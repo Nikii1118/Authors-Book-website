@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bukku</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltip.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"rel="stylesheet" type="text/css"> -->
+	<link href="https//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
+	<style>
+		ul li{
+ font-size:18px;
+}
+.contain{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+img{
+    margin: 5px;
+    transition: all 1s;
+}
+img:hover{
+    transform: scale(1.1)
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+	</style>
+</head>
+
+<body>
+	
+
+<nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="img/ob1.jpg" height="50px" width="100px" alt=""></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right main-nav">
+				<li><a href="index.html" class="scrollto">Book</a></li>
+				<li><a href="#author" class="scrollto">Author</a></li>
+				<li><a href="#awards" class="scrollto">Awards</a></li>
+				<li><a href="#contact" class="scrollto">Contact</a></li>
+				<!-- <li><a href="#" class="btn btn-green">Purchase Book</a></li> -->
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+<section id="author" style="padding-top: 40px; margin-top: -40px; background-color:#FFF7EA;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row author">
+					<div class="col-sm-4">
+						<img src="img/author1.jpg" alt="" class="pic" >
+					</div>
+					<div class="col-sm-8 author-name">
+						<h1 class="heading wow animated fadeInUp">Rakesh Kumar</h1>
+						<h4 class=" muted wow animated fadeInUp">Author, Writer...</h4>
+						<h4 class="gray wow animated fadeInUp" style=" text-align: justify;text-justify: inter-word; font-size:medium; font-family:Proxima; margin-top: 2px;color:grey; line-height: 1cm;"> Rakesh Kumar is now a full time author. He took VRS (Year 2019) from Railways from the post of Sr. Section Engineer (W)/Land & Heritage in Divisional Railway Manager Office, Firozpur (N.Rly). He thwarted number of attempts of private parties and land mafia grabbing the railway land in Firozpur Division.  He traced Railway Land worth Crores of rupees from old Punjab State Government Revenue records. He got highest awards in Indian railways employees which include three National awards. He is also a author of eleven books.
+							He was awarded highest <b>award of "India Railways Ministry of Railway National Award (MR Award)" for outstanding work for protecting the Railway land</b> during the year 2009.
+							He has also won highest <b>award of Indian Railways "Ministry of Railway National Award for English Essay Competition (Second Prize)" for the year 2010 on the topic ‘PUBLIC PRIVATE PARTNERSHIP OVER INDIAN RAILWAYS’</b> .
+							He also got <b> "Ministry of Railway National Award ‘Lal Bhadhur  Shashtryi (First Prize)" for the year 2016 for his technical book ‘Railway Bhumi Parbandhan Karoron  kamane ka Sarot.’</b> </h4>
+						
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"> 
+						 <!-- <h4 class="subheading gray wow animated fadeInUp" style="font-family:Comic Sans MS, cursive, sans-serif;"> Rakesh Kumar is now full time author .He took VRS (Year 2019) from Railways from the post of Sr.Section Engineer (W)/Land & Heritage in  Divisional Railway Manager Office, Firozpur (N.Rly).He thwarted numbers of attempts of private parties and land mafia grabbing the railway land in Firozpur Division.  He traced Railway Land worth Crores of rupees from old Punjab State Government Revenue records. He got highest awards in Indian railways employees which include three National awards.
+							He is also a author of eleven books.<a href="auth.html">Learn more..</a> 
+							 -->
+						</h4>
+						<h4 class="small muted-light wow animated fadeInUp"></h4>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-12">
+				<div class="contain">
+					<div  class="col-md-4">
+					<a target="_blank" href="img/award1.jpg"><img src="img/award_1.jpg" height="300px" width="312px" ><b>India Railways Ministry of Railway National Award (MR Award) for the year 2019</b></a>
+				</div>
+			<div  class="col-md-4">
+					<a  target="_blank" href="img/award_2.jpg"><img  src="img/award2.jpg" height="300px" width="312px"><b>Ministry of Railway National Award for English Essay Competition (Second Prize) for the year 2010 </b></a>
+				</div>
+				<div  class="col-md-4">
+					<a target="_blank" href="img/award3.jpg"><img src="img/award3.jpg" height="300px" width="312px"><b>Ministry of Railway National Award ‘Lal Bhadhur Shashtryi (First Prize) for the year 2016</b> </a>
+					
+				</div>
+				<div class="row author">
+					<p>
+					<div class="col-sm-6">
+						<img src="img/award4.JPG" alt="" class="pic" height="500px" width="600px" ><h6>Rakesh kumar recieving Baba Farid Award For Honesty in year 2011</h5>
+					</div>
+				</p>
+					<div class="col-sm-6 author-name">
+						<!-- <h1 class="heading wow animated fadeInUp">Rakesh Kumar</h1> -->
+						<h3 style="margin-top: 0px;"><b>BABA FARID AWARD FOR HONESTY - 2011</b></h3>
+						<h4 class="gray wow animated fadeInUp" style=" text-align: justify;text-justify: inter-word;font-size:medium; font-family:Proxima; margin-top: 2px;color:grey; line-height: 1cm;"> 
+							
+<b>Baba Farid Society Faridkot Awarded “Baba Farid Award for Honesty of  the Year 2011” to Sh. Rakesh Kumar on 23 September, 2011 being "Most Honest man". This includes Rs. 50,000, Citation, Doshala, Siropa. This Award is given by society to the most honest person, after lots of enquiry to the competent person.
+This Award was already given to Dr. Kiran Bedi IPS, Sh. Kirshan Kumar IAS, Sh. L K Yadav IPS, Sh. Kanwar Vijay Partap Singh IPS, Sh. Hem Raj Mittal Ex. SSS Board Chairman, Justice Kuldeep Singh etc. by the society.
+This Award was given to Rakesh Kumar as he never took a single penny from any contractor or other person as a commission/gift  during his 26 years of Railway service, although he made payment of crore of Rupees for construction work to the contractors.
+ He exposed encroachments upon hundreds of acres Railway Land from Land Mafia/Private parties & got space freed under threat to life & department backlash.
+He faces criminal cases, inquires but never left the path of honesty.</b></h4>
+
+				
+		</div>
+	
+</div>
+
+		<div class="col-md-12" >
+			<div class="row author">
+				<div class="col-sm-6 author-name">
+					<!-- <h1 class="heading wow animated fadeInUp">Rakesh Kumar</h1> -->
+					<h3><b>IRTSA AWARD </b></h3>
+					<h4 class="gray wow animated fadeInUp" style=" text-align: justify;text-justify: inter-word;font-size:medium; font-family:Proxima; margin-top: 2px;color:grey; line-height: 1cm;"> 
+						
+							<b>
+												
+								Indian Railways Technical Supervisors Association (IRTSA), a struggling association from year 1965, awarded Rakesh Kumar  as “INDIA's MOST OUT STANDING RAIL ENGINEER OF THE YEAR ” 
+								during their 47th  Annual Conference on 4th December,2012 at Rail Coach Factory (RCF) at Kapurthala, by recognizing his work on Railway Land Management. He authored two books on Railway Land Management and also suggested how Indian Railway earn crores from their valuable asset land.
+							</b>	 </h4>
+										</div>
+										<div class="col-sm-6">
+											<img src="img/award_6.jpg" alt="" class="pic" height="400px" width="500px" ><h6>Rakesh kumar recieving award for "India's Most Outstanding Rail Engineer Of The Year ” 
+												during their 47th  Annual Conference on 4 December 2012 at Rail Coach Factory (RCF) at Kapurthala.</h6>
+										</div>
+										</div>
+										<h3 class="heading" style="text-align: justify;text-justify: inter-word;">Appearences and Events</h3>
+					<ol>
+				<p><li style="  font-size:medium; font-family:Proxima;"> Organized Seminar on Dissemination of Knowledge about Revenue Records including procedure for Acquisition & Demarcation of Railway Land including Maintenance of land records  at Jalandhar on 17-18 November 2008</li></p>
+				
+				 <p><li style=" font-size:medium; font-family:Proxima;"> Visited Indian Railway Institute Of Civil Engineering ,Pune on 5 December, 2011 IRICEN  to deliver lecture on Railway Land Management .	</li></p>
+				 <p><li style="  font-size:medium; font-family:Proxima;"> Attended workshop on land matters (Land plan and working out of various charges) at Northern Railway Headquarter office on 17 December, 2011</li></p>
+					<p><li style="  font-size:medium; font-family:Proxima;"> Attend and present paper during seminar cum Workshop on Land Management on 02 Februry, 2012 at Centre for Advance Maintenance Technology(CAMTECH), Maharajpur,Gwalior (M.P.)</li></ol></p>
+				</div>
+									
+				</div>
+			
+		</div>
+		</div>	
+	</div>
+</div>
+	
+</section>
+
+<section class="call-to-action" id="awards">
+	<div class="call-to-action">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-12 text-left text-center-mobile wow animated fadeInUp">
+				<h2 class="heading  top-fit">Railway Awards:</h2>
+				<p><div style="font-family:Proxima;"><ul style="text-align: justify;text-justify: inter-word;">
+					<li>
+						
+						   Award of India Railways Ministry of Railway National Award (MR Award) for outstanding work for protecting the Railway land during the year 2009.</li>
+						<li>Award of Indian Railways ‘Ministry of Railway National Award for English Essay Competition (Second Prize)’ for the year 2010 on the topic ‘PUBLIC PRIVATE PARTNERSHIP OVER INDIAN RAILWAYS’.</li>
+						<li> ‘Ministry of Railway National Award ‘Lal Bhadhur  Shashtryi (First Prize)’ for the year 2016 for his technical book ‘Railway Bhumi Parbandhan Karoron  kamane ka Sarot.’</li>
+					<li>		Group GM Award during Railway week 2011, Rs 5000 from group Award of Rs 30000 for earnest efforts realize 30-40 year pending land license fee. The best achievement of Division land earning Rs 69.29 crore against the HQ target of Rs 20 Crore. Railway Board Member Engineering also lauded the efforts.</li>
+					<li>	Principal Chief Engineering Award for Year 2010-11 at New Delhi.</li>
+					<li>	Divisional Railway Manager Award for Year 2002, 2008, 2009 and 2012.</li>
+					<li>	In year 2010, he got second positions in Divisional Hindi Essay completion, Noting & Drafting completion.</li>
+					<li>	He also got number of cash awards.  
+						
+						</li>
+				</ul></div></p>
+				
+				
+				
+				<div class="contain">
+					
+					<a target="_blank" href="img/award_2.jpg"><img src="img/award_2.jpg" height="300px" width="312px" ></a>
+				    <a  target="_blank"href="img/award1.jpg"><img id="myImg" src="img/award1.jpg" alt="awad" height="300px" width="312px"></a>
+					<a target="_blank"href="img/award3.jpg"><img src="img/award3.jpg" height="300px" width="312px"></a>
+					<a target="_blank"href="img/award4.jpg"><img src="img/award4.jpg" height="300px" width="312px"></a>
+					<a target="_blank"href="img/award5.jpg"><img src="img/award5.jpg"height="300px" width="312px"></a>
+					<a target="_blank"href="img/award6.jpg"><img src="img/award6.jpg"height="300px" width="312px"></a>
+				</div> 
+			
+				  
+				
+					  <div class="clearfix"></div>
+					   
+					
+					  
+					 
+				
+		
+	 </div> 
+	</div>
+	</div>
+	</section>
+</section>
+
+<section id="contact"  style="background-color:#FFF7EA;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-left text-center-mobile wow animated fadeInUp contact-details">
+				<h3 class="heading no-margin wow animated fadeInUp">Contact Author</h3>
+				<!-- <h4 class="subheading muted no-margin wow animated fadeInUp">Say hi or ask something.</h4> -->
+				<div class="details">
+					<h4 style="font-size:x-large; ">Rakesh Kumar</h4>
+					<h4 style="font-size:large;"> 
+						Udham Singh Wala-148028<br>
+						District Sangrur, Punjab<br>
+						India</h4>
+						<div class="social" class="text-right text-center-mobile">
+								
+								
+					
+							<h6 style="font-size:medium; ">Facebook: <a href="https://www.facebook.com/profile.php?id=100000821760674" class="facebook"><i class="fa fa-facebook"></i></a></h6>
+				</div>
+				<div class="details">
+					<h4 class="font-size:large; ">+91-9530503412 <br>
+						rppalak46@gmail.com
+					</h4>
+					
+				 
+
+				</div>
+			</div>
+			<form action="https://script.google.com/macros/s/AKfycbyj3-bVWb3XTNbZeKN7lYERnLuWg28iacnPPdYGXJwRX9nbOHg/exec" method="post" class="mail-form">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-sm-6">
+							<input name="firstname" type="text" class="form-control" placeholder="Name" data-validation="required" color="black">
+						</div>
+						<div class="col-sm-6">
+							<input name="email" type="text" class="form-control" placeholder="Email" data-validation="email" color="black">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<input name="subject" type="text" class="form-control" placeholder="Subject" data-validation="required" color="black">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea name="body" class="form-control" rows="10" placeholder="Message. . ." data-validation="required" ></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12.text-left">
+							<input type="submit" class="btn btn-green contact-button" value="Send">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 text-left text-center-mobile">
+				<p class="copyright small muted">Copyright Rakesh Kumar - All rights reserved!</p>
+			</div>
+			<div class="col-sm-6 text-right text-center-mobile">
+				<div class="social">
+					<a href="https://www.facebook.com/profile.php?id=100000821760674" class="facebook"><i class="fa fa-facebook"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+
+<div class="notification-box"><span>Sending...</span></div>
+<div class="mobile-nav">
+	<ul class="menu">
+		
+	</ul>
+</div>
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.onepagenav.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/jquery.form-validator.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
